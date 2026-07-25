@@ -1,0 +1,892 @@
+<HTML>
+<HEAD>
+<TITLE>SDSJKDHSAJK</TITLE>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+
+
+.my-btn{
+    background:linear-gradient(45deg,#0d6efd,#6610f2);
+    color:#fff;
+    border:none;
+    border-radius:50px;
+    padding:12px 30px;
+    font-size:20px;
+    font-weight:bold;
+    position:relative;
+    overflow:hidden;
+    transition:.4s;
+    box-shadow:0 8px 20px rgba(13,110,253,.4);
+}
+.my-btn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:40%;
+    height:100%;
+    background:rgba(255,255,255,.4);
+    transform:skewX(-25deg);
+    transition:.7s;
+}
+.text-box{
+    font-size:16px;
+    line-height:1.7;
+    color:#2b2b2b;
+    background:rgba(255,255,255,0.85);
+    padding:18px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+.my-btn:hover::before{
+    left:130%;
+}
+.my-btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 15px 35px rgba(102,16,242,.6);
+}
+
+/* Click Animation */
+.my-btn:active{
+    transform:scale(.95);
+}
+
+.adv-card{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    border-radius:18px;
+    padding:22px;
+    color:#fff;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    position:relative;
+    overflow:hidden;
+    transition:.4s;
+}
+.adv-card{
+    animation:floatSoft 5s ease-in-out infinite;
+}
+
+@keyframes floatSoft{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+}
+
+/* glowing border line effect */
+.adv-card::before{
+    content:"";
+    position:absolute;
+ inset:0;
+    border-radius:18px;
+    padding:2px;
+    background:linear-gradient(45deg,#0d6efd,#6610f2,#20c997,#0d6efd);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+    opacity:.6;
+}
+.adv-badge{
+    display:inline-flex;
+    gap:8px;
+    align-items:center;
+    font-size:13px;
+    padding:6px 12px;
+    border-radius:50px;
+    background:rgba(0,0,0,.25);
+    margin-bottom:10px;
+    animation:pulseTag 2.5s infinite;
+}
+
+.hero-brand{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px 10px;
+}
+
+.brand-glass{
+    text-align:center;
+    padding:20px 40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+    animation: popIn 1s ease;
+}
+.animated-text{
+    font-size:18px;
+    line-height:1.7;
+    font-weight:500;
+    background: linear-gradient(90deg,#0d6efd,#6610f2,#20c997,#0d6efd);
+    background-size:300% 300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation: gradientMove 4s ease infinite;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.brand-title{
+    font-size:42px;
+    font-weight:900;
+    letter-spacing:2px;
+    background:linear-gradient(90deg,#0d6efd,#20c997,#6610f2);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    position:relative;
+    animation: floatText 3s ease-in-out infinite;
+}
+
+/* Subtitle */
+.brand-sub{
+    margin-top:8px;
+    font-size:14px;
+    color:rgba(255,255,255,0.8);
+    letter-spacing:1px;
+}
+
+@keyframes floatText{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
+}
+
+@keyframes popIn{
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+@keyframes pulseTag{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.05);}
+}
+
+/* heading animation */
+.adv-card h2{
+    font-weight:700;
+    margin-bottom:8px;
+    animation:fadeInUp .6s ease;
+}
+
+@keyframes fadeInUp{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* list style */
+.adv-card ul{
+    list-style:none;
+  padding:0;
+    margin-top:12px;
+}
+
+.adv-card ul li{
+    padding:6px 0;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    transition:.3s;
+    opacity:.9;
+}
+
+/* hover effect */
+.adv-card ul li:hover{
+    transform:translateX(8px);
+    color:#0d6efd;
+}
+
+/* check icon glow */
+.adv-card i.fa-check{
+    color:#20c997;
+    filter:drop-shadow(0 0 5px rgba(32,201,151,.6));
+}
+
+/* button */
+.adv-btn{
+    margin-top:15px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:50px;
+    font-weight:bold;
+    color:#fff;
+    background:linear-gradient(45deg,#0d6efd,#6610f2);
+    position:relative;
+    overflow:hidden;
+    transition:.3s;
+}
+
+/* button hover */
+.adv-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 30px rgba(13,110,253,.4);
+}
+
+/* shine effect */
+.adv-btn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:40%;
+    height:100%;
+    background:rgba(255,255,255,.35);
+    transform:skewX(-25deg);
+    transition:.6s;
+}
+
+.adv-btn:hover::before{
+    left:130%;
+}
+
+
+
+
+
+
+
+
+
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.dropdown-menu{
+    border:none;
+    border-radius:15px;
+    padding:8px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+.dropdown-item{
+    border-radius:10px;
+    padding:10px 18px;
+    transition:.3s;
+}
+.dropdown-item:hover{
+    background:linear-gradient(45deg,#0d6efd,#6610f2);
+    color:#fff;
+    transform:translateX(8px);
+}
+.dropend{
+    position:relative;
+}
+
+.dropend .dropdown-menu{
+    position:absolute;
+    top:0;
+    left:100%;
+    margin-left:10px;
+    display:none;
+    animation:slideRight .3s ease;
+}
+.dropend:hover>.dropdown-menu{
+    display:block;
+}
+
+@keyframes slideRight{
+    from{
+        opacity:0;
+        transform:translateX(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+.services-slider{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding:20px;
+    scroll-snap-type:x mandatory;
+}
+
+/* hide scrollbar */
+.services-slider::-webkit-scrollbar{
+    display:none;
+}
+
+.service-card{
+    min-width:220px;
+    flex:0 0 auto;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:18px;
+    padding:20px;
+    color:#fff;
+    text-align:center;
+    scroll-snap-align:start;
+    transition:0.4s;
+    animation: fadeUp 1s ease;
+}
+
+.service-card:hover{
+    transform:translateY(-8px) scale(1.05);
+    box-shadow:0 15px 30px rgba(0,0,0,0.3);
+}
+
+.icon{
+    font-size:40px;
+    margin-bottom:10px;
+    animation: floatIcon 3s infinite ease-in-out;
+}
+
+/* animations */
+@keyframes floatIcon{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.myy-btn:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(13,110,253,0.5);
+}
+
+.myy-btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.4);
+    transform: skewX(-25deg);
+    transition: 0.6s;
+}
+
+.brand-header{
+    text-align:center;
+    padding:15px 0;
+    background:rgba(0,0,0,0.25);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.brand-name{
+    font-size:40px;
+    font-weight:800;
+    background:linear-gradient(45deg,#0d6efd,#6610f2,#20c997);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation: glowText 2.5s infinite alternate;
+    letter-spacing:2px;
+}
+@keyframes glowText{
+    0%{
+        transform:translateY(0);
+        text-shadow:0 0 10px rgba(13,110,253,0.3);
+    }
+    100%{
+        transform:translateY(-5px);
+        text-shadow:0 0 25px rgba(102,16,242,0.8);
+    }
+}
+.myy-btn{
+    transition: 0.3s;
+}
+
+.myy-btn:hover{
+    animation: bounce 0.6s;
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform: translateY(0);
+    }
+    30%{
+        transform: translateY(-10px);
+    }
+    60%{
+        transform: translateY(-5px);
+    }
+}
+
+
+.myy-btn:hover{
+    background:#0d6efd;
+    color:white;
+    box-shadow:
+        0 0 10px #0d6efd,
+        0 0 20px #0d6efd,
+        0 0 40px #0d6efd;
+}
+.form-box{
+    max-width:500px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.form-box h3{
+    text-align:center;
+    font-weight:bold;
+    color:#0d6efd;
+    margin-bottom:25px;
+}
+
+.form-control,
+.form-select{
+    border-radius:12px;
+    padding:12px;
+    transition:.3s;
+}
+
+.form-control:focus,
+.form-select:focus{
+    border-color:#0d6efd;
+    box-shadow:0 0 12px rgba(13,110,253,.3);
+}
+
+.form-check{
+    margin-bottom:10px;
+}
+
+.submit-btn{
+    border-radius:50px;
+    padding:12px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.submit-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(13,110,253,.4);
+}
+
+.reset-btn{
+    border-radius:50px;
+    padding:12px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.reset-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(25,135,84,.4);
+}
+img{
+    width:100%;
+    border-radius:15px;
+    transition:all .4s ease;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+img:hover{
+    transform:scale(1.05);
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+.image-box{
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.image-box img{
+    transition:.5s;
+}
+
+.image-box:hover img{
+    transform:scale(1.08);
+}
+.image-box{
+    position:relative;
+    overflow:hidden;
+}
+
+.image-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:40%;
+    height:100%;
+    background:rgba(255,255,255,.4);
+    transform:skewX(-25deg);
+    transition:.7s;
+}
+
+.image-box:hover::before{
+    left:150%;
+}
+.image-box{
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.image-box img{
+    width:100%;
+    transition:.5s;
+}
+
+.image-box:hover img{
+    transform:scale(1.08);
+}
+
+.image-box:hover{
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.form-box{
+    animation: zoomIn 0.8s ease;
+}
+
+@keyframes zoomIn{
+    0%{
+        opacity:0;
+        transform:scale(0.7);
+    }
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+.image-box{
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.image-box img{
+    width:100%;
+    transition:.5s;
+}
+
+.image-box:hover img{
+    transform:scale(1.08);
+}
+
+.image-box:hover{
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+}
+.top-contact-bar{
+    background:linear-gradient(90deg,#0d6efd,#6610f2,#20c997);
+    background-size:300% 300%;
+    animation:gradientMove 6s ease infinite;
+    padding:10px 0;
+    color:#fff;
+    font-weight:bold;
+    font-size:17px;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+.top-contact-bar a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.contact-left,
+.contact-right{
+    transition:.4s;
+}
+
+.contact-left:hover,
+.contact-right:hover{
+    transform:scale(1.08);
+    text-shadow:0 0 12px white;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+</style>
+</HEAD>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<BODY>
+
+
+
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-12 text-white bg-dark">
+<div class="hero-brand">
+    <div class="brand-glass">
+        <h1 class="brand-title">Yash Goyal</h1>
+        <p class="brand-sub">GST • Income Tax • TDS Consultancy</p>
+    </div>
+</div>
+<div class="services-slider">
+
+    
+
+    <div class="service-card">
+        <div class="icon">📊</div>
+        <h4>Tax Services</h4>
+        <p>GST & compliance support.</p>
+    </div>
+
+    <div class="service-card">
+        <div class="icon">📊</div>
+        <h4>Documentation</h4>
+        <p>Income Tax fillingServices</p>
+    </div>
+
+ <div class="service-card">
+        <div class="icon">📊</div>
+        <h4>Documentation</h4>
+        <p>TDS & Compliances</p>
+    </div>
+   <div class="service-card">
+        <div class="icon">📑</div>
+        <h4>Documentation</h4>
+        <p>Accounting Services</p>
+    </div>
+
+</div>
+<div class="dropdown">
+   <button class="btn btn-primary dropdown-toggle my-btn" data-bs-toggle="dropdown">
+    Menu
+</button>
+
+<ul class="dropdown-menu shadow-lg border-0 rounded-4 p-2">
+<li><a class="dropdown-item" href="#">🏠 Home</a></li>
+<li class="dropend"><a class="dropdown-item dropdown-toggle" href="#">🏢 About Us</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Company Profile</a></li><li><a class="dropdown-item" href="#">Mission & Vision</a></li><li><a class="dropdown-item" href="#">Our Team</a></li><li><a class="dropdown-item" href="#">Achievements</a></li></ul></li>
+<li class="dropend"><a class="dropdown-item dropdown-toggle" href="#">💼 Services</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">GST Registration</a></li><li><a class="dropdown-item" href="#">GST Return Filing & Handling GST Notices & Appeals</a></li><li><a class="dropdown-item" href="#">Income Tax Return</a></li><li><a class="dropdown-item" href="#">TDS Return</a></li><li><a class="dropdown-item" href="#">Accounting</a></li></ul></li>
+<li class="dropend"><a class="dropdown-item dropdown-toggle" href="#">📚 Resources</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">GST Guide</a></li><li><a class="dropdown-item" href="#">Income Tax Guide</a></li><li><a class="dropdown-item" href="#">Downloads</a></li></ul></li>
+<li class="dropend"><a class="dropdown-item dropdown-toggle" href="#">📞 Contact</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Office</a></li><li><a class="dropdown-item" href="#">Email</a></li><li><a class="dropdown-item" href="#">WhatsApp</a></li></ul></li>
+<li><hr class="dropdown-divider"></li><li><a class="dropdown-item fw-bold text-primary" href="Login.html">🔐 Login</a></li></ul>
+</div>
+<div class="top-contact-bar">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+
+        <div class="contact-left">
+            📞 <a href="tel:+919557363080">+91 9557363080</a>
+        </div>
+
+        <div class="contact-right">
+            ✉️ <a href="mailto:yashy4423@gmail.com">
+                yashy4423@gmail.com
+            </a>
+        </div>
+
+    </div>
+</div>
+<div class="row g-5">
+<div class="col-3 bg-white text-dark p-4">
+<h1> Yash Goyal(GST Practitioner)</h1>
+<p class="animated-text">Why is tax planning important?</p>
+<div class="card shadow-lg border-0 h-100">
+<img src="OIP.jpg" class="img-fluid mb-4">
+<p class="animated-text">
+Strategies to minimize tax.
+ Hold investments in registered accounts, such as TFSAs, RRSPs and RESPs
+Income splitting can reduce taxes by moving income to a lower-earning spouse
+Maximize permissible tax deductions and tax credits
+Use the Home Buyers’ Plan to make a down payment on a new home
+Charitable giving can help reduce your tax liabilities
+</p class="animated-text">
+<img src="OIP (1).jpg" class="img-fluid"></br>
+
+<button class="btn btn-primary border-danger my-btn text-white mt-4">click me
+</button>
+</div>
+</div>
+<div class="col-3 bg-white text-dark p-4"> 
+<p class="animated-text">Importance of GST (Goods and Services Tax)
+
+GST is important because it creates a simple and transparent tax system while benefiting both the government and businesses.
+
+1. Simplifies the Tax System
+
+GST replaces multiple indirect taxes with a single tax, making tax compliance easier for businesses.
+
+2. Eliminates Double Taxation
+
+It prevents the "tax on tax" effect by allowing businesses to claim input tax credit, reducing the overall tax burden.
+
+3. Promotes Economic Growth
+
+A uniform tax system encourages trade across states, reduces business costs, and supports economic development. </p> </div>
+
+<div class="col-3 bg-white text-dark p-4">
+<p class="animated-text">Income tax
+Income Tax is a direct tax paid by individuals and businesses on their income or profits. It is one of the government's primary sources of revenue.
+
+Importance of Paying Income Tax
+
+1. Funds Public Services
+Income tax helps the government finance essential services such as:
+
+Education
+Healthcare
+Defense
+Police and public safety
+Roads, railways, and other infrastructure
+
+2. Supports National Development
+The revenue collected through income tax is used for:
+
+Building infrastructure
+Rural and urban development
+Social welfare programs
+Economic growth initiatives
+
+
+
+
+</p>
+<img src="gir.jpg" class="img-fluid">
+</div>
+<div class="col-3 bg-white text-dark p-4">
+<p class="animated-text">TDS
+TDS (Tax Deducted at Source) is a system in which tax is deducted from certain payments at the time they are made. The person making the payment deducts a specified percentage of tax and deposits it with the government on behalf of the recipient.
+
+Examples of payments where TDS may apply include:
+
+Salary
+Interest on deposits
+Rent
+Professional fees
+Contractor payments
+Commission and brokerage
+Importance of TDS
+1. Ensures Timely Tax Collection
+
+TDS allows the government to collect taxes throughout the year instead of waiting until the end of the financial year.
+
+2. Reduces Tax Evasion
+
+Since tax is deducted before payment is received, it helps improve tax compliance and minimizes tax evasion.
+
+3. Distributes Tax Burden
+
+Tax is collected in small amounts at the time of each payment, making it easier for taxpayers to manage their tax liability.
+<img src="pay.jpg" class="img-fluid">
+</p>
+</div>
+</div>
+<div class="row h-20 pt-3" g-3>
+<div class="col-4 text-white bg-white mt-3 bg-4 w-100 p-4">
+<img src="State-vs-Federal-taxes.jpg" class="img-fluid" w-100 h-50>
+</div>
+<div class="col-4 text-white bg-danger mt-3 bg-4 w-30 p-4 g-15">
+<div class="adv-card">
+
+    <div class="adv-badge">
+        <i class="fa-solid fa-scale-balanced"></i>
+        Tax Services
+    </div>
+
+    <h2>GST, Income Tax & TDS Services</h2>
+
+    <p>
+        We provide expert GST Registration, GST Return Filing, Income Tax Return (ITR), TDS Compliance, Accounting, Bookkeeping and Tax Planning services for individuals and businesses.
+
+
+    </p>
+
+    <ul>
+        <li><i class="fa-solid fa-check"></i> GST Disputes & Appeals</li>
+        <li><i class="fa-solid fa-check"></i> TDS</li>
+        <li><i class="fa-solid fa-check"></i> Income Tax Filling</li>
+    </ul>
+
+    <button class="adv-btn">
+        <i class="fa-solid fa-phone"></i> Contact Now
+    </button>
+</div>
+</div>
+<div class="col-4 text-white bg-dark mt-3 bg-4 w-50 h-100 p-4">
+<h5>Please enter your details</h5><form>
+<div class="mb-4">
+<label class="label-form">Enter Name</label>
+<input type="text"class="form-control" placeholder="Enter Name">
+</div>
+<div class="mt-3">
+<label class="label-form">Enter Password</label>
+<input type="password" class="form-control" placeholder="Enter Password">
+</div>
+<div class="mt-3">
+<label class="label-form">Enter your E-mail id</label>
+<input type="password" class="form-control"placeholder="Enter E-mail Id">
+</div>
+<div class="mt-3">
+<label class="label-form">Write about yourself</label>
+<textarea> class="form-control" row="5"></textarea>
+</div>
+<div class="mt-3">
+Choose Stream:-
+<div class="form-check-label">Science</label>
+<input class="form-check-label" type="checkbox">
+<div class="form-check-label">Commerce</label>
+<input class="form-check-label" type="checkbox">
+</div>
+<div class="mt-4">
+<h7>Select your city</h7>
+<select class="City">
+<option>Agra</option>
+<option>delhi</option>
+<option>mumbai</option>
+</select>
+</div>
+<div class="mt-4">
+Select your Gender
+<div class="form-check-label">Male</label>
+<input class="form-check-label"type="radio" name="gender">
+</div>
+<div class="form-check-label">Female</label>
+<input class="form-check-label"type="radio" name="gender">
+</div>
+<button type="submit" class="btn btn-primary myy-btn btn-lg mt-4 w-100">
+    Submit
+</button>
+<DIV CLASS-"mt-4">
+<button type="reset" class="btn btn-success myy-btn btn-lg mt-4 w-100">
+    Reset
+</button>
+</div>
+</div>
+</div>
+</form>
+<script>
+document.querySelectorAll('.dropend .dropdown-toggle').forEach(function(el){
+    el.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+
+        let submenu = this.nextElementSibling;
+
+        // toggle show class
+        if(submenu.classList.contains('show')){
+            submenu.classList.remove('show');
+        } else {
+            submenu.classList.add('show');
+        }
+    });
+});
+</script>
+</body>
+</html>
