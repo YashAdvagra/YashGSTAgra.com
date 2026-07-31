@@ -651,7 +651,7 @@ select:focus{
     0 0 20px cyan,
     0 0 35px cyan;
 }
-nput[type=submit]::after{
+input[type=submit]::after{
     content:"";
     position:absolute;
     top:0;
@@ -890,7 +890,213 @@ body{
 #header::before{
     display:none !important;
 }
+.light{
+    position:fixed;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    background:rgba(0,255,255,.25);
+    filter:blur(70px);
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    z-index:-1;
+}
+#header{
+    border:3px solid;
+    animation:borderColor 4s linear infinite;
+}
+
+@keyframes borderColor{
+    0%{border-color:#00e5ff;}
+    25%{border-color:#00ff88;}
+    50%{border-color:#ffcc00;}
+    75%{border-color:#ff0080;}
+    100%{border-color:#00e5ff;}
+}
+.orb{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(80px);
+    animation:float 12s ease-in-out infinite alternate;
+}
+.bg-animation{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.bg-animation span{
+    position:absolute;
+    display:block;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    filter:blur(90px);
+    animation:move 18s linear infinite;
+}
+
+.bg-animation span:nth-child(1){
+    background:#00e5ff;
+    left:5%;
+    top:10%;
+}
+
+.bg-animation span:nth-child(2){
+    background:#ff0080;
+    left:70%;
+    top:15%;
+    animation-delay:3s;
+}
+
+.bg-animation span:nth-child(3){
+    background:#00ff99;
+    left:30%;
+    top:65%;
+    animation-delay:6s;
+}
+
+.bg-animation span:nth-child(4){
+    background:#ffcc00;
+    left:80%;
+    top:70%;
+    animation-delay:9s;
+}
+
+.bg-animation span:nth-child(5){
+    background:#7b2ff7;
+    left:45%;
+    top:35%;
+    animation-delay:12s;
+}
+
+@keyframes move{
+    0%{
+        transform:translate(0,0) scale(1);
+    }
+    50%{
+        transform:translate(120px,-120px) scale(1.4);
+    }
+    100%{
+        transform:translate(-120px,120px) scale(1);
+    }
+}
+#header{
+    transition:all .5s ease;
+    transform-style:preserve-3d;
+}
+
+#header:hover{
+    transform:perspective(1000px)
+              rotateX(8deg)
+              rotateY(-8deg)
+              scale(1.04);
+
+    box-shadow:
+    0 30px 60px rgba(0,0,0,.4),
+    0 0 40px cyan;
+}
+#header{
+    position:relative;
+}
+
+#header::before{
+    content:"";
+    position:absolute;
+    inset:-3px;
+    border-radius:22px;
+    background:linear-gradient(
+    45deg,
+    red,
+    orange,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    magenta,
+    red);
+
+    background-size:400%;
+    z-index:-1;
+
+    animation:borderMove 6s linear infinite;
+}
+
+@keyframes borderMove{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:400%;
+}
+
+}
+#header{
+    animation: floatBox 4s ease-in-out infinite;
+}
+
+@keyframes floatBox{
+    0%,100%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
+input[type=submit]{
+
+background:linear-gradient(
+90deg,
+red,
+orange,
+yellow,
+lime,
+cyan,
+blue,
+violet,
+red);
+
+background-size:400%;
+
+animation:rainbow 5s linear infinite;
+
+}
+
+@keyframes rainbow{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:400%;
+}
+
+}
+card{
+    transition: .5s;
+    transform-style: preserve-3d;
+}
+
+.card:hover{
+    transform:
+        perspective(1000px)
+        rotateX(10deg)
+        rotateY(-10deg)
+        scale(1.06);
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,.3),
+        0 0 30px #00e5ff;
+}
 </style>
+</head>
+<body>
 
 
 <script language="javascript">
@@ -1023,6 +1229,13 @@ State
 
 </div>
 </div>
-
+<div class="light"></div>
+<div class="bg-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 </body>
 </html>
