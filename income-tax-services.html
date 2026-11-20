@@ -1,64 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="Yash Goyal">
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Yash Goyal"><meta name="description" content="Reliable assistance for income tax return filing, tax planning, notices and assessment-related compliance — with a focus on accurate records and clear guidance.">
 <title>Income Tax Services | Yash Goyal</title>
-<meta name="description" content="Practical support for income tax return filing, tax compliance, notices and assessment-related matters.">
 <style>
-:root{--navy:#102b50;--blue:#1d4f91;--gold:#d8a94e;--ink:#203047;--muted:#637083;--bg:#f5f7fa}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
-.topbar{background:#0b203b;color:#fff;padding:9px 5%;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:14px}
-.topbar a{color:#fff;text-decoration:none}
-header{background:linear-gradient(120deg,#102b50,#1d4f91);color:#fff;padding:48px 20px 42px;text-align:center}
-.eyebrow{color:#f4d28c;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:bold}
-header h1{font-size:clamp(30px,5vw,46px);line-height:1.15;margin:12px 0}
-header p{max-width:760px;margin:0 auto;color:#e8eef7}
-nav{background:#fff;box-shadow:0 3px 16px #102b5012;padding:13px 5%;display:flex;justify-content:center;gap:22px;flex-wrap:wrap;position:sticky;top:0;z-index:5}
-nav a{color:var(--navy);text-decoration:none;font-weight:700;font-size:14px}
-nav a:hover{color:var(--blue)}
-.container{max-width:1000px;margin:34px auto;padding:0 18px}
-.intro,.service-card,.cta{background:#fff;border-radius:18px;padding:26px;margin-bottom:20px;box-shadow:0 8px 28px #102b500d;border:1px solid #e9eef5}
-h2{color:var(--navy);font-size:24px;margin:0 0 12px}h3{color:var(--navy);font-size:18px;margin:0 0 8px}
-p{margin:8px 0;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
-.service-card{margin:0;transition:transform .25s ease,box-shadow .25s ease}
-.service-card:hover{transform:translateY(-5px);box-shadow:0 14px 32px #102b501c}
-.icon{width:42px;height:42px;border-radius:12px;background:#edf3fb;color:var(--blue);display:grid;place-items:center;font-size:21px;margin-bottom:13px}
-ul{padding-left:20px;color:var(--muted);margin:10px 0 0}li{margin:5px 0}
-.cta{background:linear-gradient(120deg,#102b50,#1d4f91);color:#fff;text-align:center}
-.cta h2,.cta p{color:#fff}.cta p{opacity:.9}
-.btn{display:inline-block;margin:8px 5px 0;padding:11px 20px;border-radius:30px;background:#fff;color:var(--navy);font-weight:bold;text-decoration:none}
-.btn.gold{background:var(--gold);color:#172b45}
-footer{background:#0b203b;color:#dce5f1;text-align:center;padding:23px 15px;font-size:14px}
-.fade{animation:rise .65s ease both}
-@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:600px){.topbar{justify-content:center;text-align:center}header{padding:38px 18px}nav{gap:13px}.intro,.service-card,.cta{padding:21px}}
+:root{--navy:#071b35;--navy2:#102d53;--gold:#d9ad58;--gold2:#f2d99d;--ink:#17283d;--muted:#64748b;--paper:#f6f8fc;--line:#e6ebf2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+a{text-decoration:none}.top{background:#06152a;color:#dce7f5;padding:9px max(5%,calc((100% - 1160px)/2));display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}.top a{color:#fff}
+.nav{height:auto;min-height:70px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:14px max(5%,calc((100% - 1160px)/2));box-shadow:0 5px 24px #0b24420b;position:sticky;top:0;z-index:20;gap:20px}
+.brand{font-weight:800;color:var(--navy);font-size:18px;letter-spacing:.2px}.brand small{display:block;font-size:10px;letter-spacing:1.6px;color:#9b7838;font-weight:700}
+.links{display:flex;gap:22px;flex-wrap:wrap}.links a{font-size:13px;font-weight:700;color:#33445b}.links a:hover{color:#a5792d}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 82% 20%,#315987 0,transparent 32%),linear-gradient(120deg,#071b35 0%,#102d53 62%,#183d68 100%);color:#fff;padding:82px 20px 78px}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff20;border-radius:50%;width:420px;height:420px;right:-100px;top:-190px}.hero:after{width:270px;height:270px;right:55px;top:-105px;border-color:#d9ad5840}
+.hero-inner{max-width:1160px;margin:auto;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold2);font-size:11px;font-weight:800;letter-spacing:2.3px;text-transform:uppercase}.eyebrow:before{content:"";width:28px;height:2px;background:var(--gold)}
+.hero h1{font-size:clamp(36px,5vw,62px);line-height:1.08;max-width:760px;margin:18px 0 17px;letter-spacing:-1.5px}.hero h1 span{color:var(--gold2)}.hero p{max-width:690px;color:#d7e2f0;font-size:17px;margin:0}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 21px;border-radius:7px;font-size:13px;font-weight:800;transition:.25s}.btn-gold{background:linear-gradient(135deg,#e9c779,#c99a43);color:#14243a;box-shadow:0 8px 22px #0002}.btn-outline{border:1px solid #ffffff70;color:#fff}.btn:hover{transform:translateY(-3px);filter:brightness(1.06)}
+.hero-note{margin-top:30px;color:#c2d0e1;font-size:12px;letter-spacing:.3px}.hero-note b{color:#fff}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}.stats{display:grid;grid-template-columns:repeat(3,1fr);background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 15px 45px #102d5310;margin-top:-28px;position:relative;z-index:3;padding:20px 10px}
+.stat{text-align:center;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat strong{display:block;color:var(--navy);font-size:19px}.stat span{font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+.section{padding:70px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 34px}.kicker{color:#a47a32;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.section h2{font-size:clamp(27px,3.5vw,38px);line-height:1.2;color:var(--navy);margin:10px 0}.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:25px 24px;min-height:220px;box-shadow:0 8px 25px #102d5308;transition:transform .28s,box-shadow .28s,border-color .28s;position:relative;overflow:hidden}.card:after{content:"";position:absolute;height:3px;bottom:0;left:0;width:0;background:linear-gradient(90deg,var(--gold),#f1dca7);transition:width .3s}.card:hover{transform:translateY(-7px);box-shadow:0 18px 35px #102d5315;border-color:#d8c18f}.card:hover:after{width:100%}
+.icon{height:48px;width:48px;display:grid;place-items:center;border-radius:12px;background:#f7f1e5;color:#9a702a;font-size:22px;margin-bottom:17px}.card h3{font-size:17px;color:var(--navy);margin:0 0 8px}.card p{font-size:13px;color:var(--muted);margin:0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.panel{background:#0c2545;color:#fff;border-radius:14px;padding:34px;position:relative;overflow:hidden}.panel:after{content:"YG";position:absolute;right:8px;bottom:-45px;font-size:130px;font-weight:900;color:#ffffff08}.panel h2{color:#fff;font-size:29px;margin:8px 0 12px}.panel p{color:#c8d5e5;font-size:14px}.checklist{display:grid;gap:14px}.check{display:flex;gap:13px;align-items:flex-start}.tick{flex:none;width:25px;height:25px;border-radius:50%;background:#f5ecd9;color:#8b6425;display:grid;place-items:center;font-size:13px;font-weight:900}.check b{display:block;color:var(--navy);font-size:14px}.check span{display:block;color:var(--muted);font-size:12px}
+.cta{background:linear-gradient(120deg,#102d53,#071b35);color:#fff;border-radius:14px;padding:42px 28px;text-align:center;margin-bottom:65px;position:relative;overflow:hidden}.cta h2{font-size:30px;margin:0 0 8px}.cta p{color:#d0dbea;margin:0}.cta .actions{justify-content:center}
+footer{background:#06152a;color:#aebed1;padding:30px 20px;text-align:center;font-size:12px}footer b{color:#fff}
+.reveal{animation:rise .7s both}@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:850px){.cards{grid-template-columns:repeat(2,1fr)}.split{grid-template-columns:1fr;gap:24px}.links{gap:12px}}
+@media(max-width:560px){.nav{align-items:flex-start;flex-direction:column}.links{gap:10px 15px}.hero{padding:58px 18px}.hero p{font-size:15px}.cards{grid-template-columns:1fr}.stats{padding:15px 3px}.stat strong{font-size:15px}.stat span{font-size:9px}.section{padding:52px 0}.panel{padding:25px}}
 </style>
-</head>
-<body>
-<div class="topbar"><span>📍 Agra, Uttar Pradesh</span><span>📞 <a href="tel:+919557363080">+91 9557363080</a> &nbsp; | &nbsp; ✉ <a href="mailto:yashy4423@gmail.com">yashy4423@gmail.com</a></span></div>
-<header><div class="eyebrow">Income Tax Consultancy</div><h1>Income Tax Services</h1><p>Practical support for income tax return filing, tax compliance, notices and assessment-related matters.</p></header>
-<nav>
-<a href="index.html">Home</a>
-<a href="gst-services.html">GST Services</a>
-<a href="income-tax-services.html">Income Tax</a>
-<a href="tds-services.html">TDS</a>
-<a href="accounting-services.html">Accounting</a>
-</nav>
-<main class="container">
-<section class="intro fade"><h2>Professional Support by Yash Goyal</h2>
-<p>Get organised assistance with individual and business income tax compliance. Services are handled with a focus on accurate reporting, documentation and timely filing, based on the information and records provided.</p><p><strong>Yash Goyal</strong> · GST Practitioner · LLB · GST • Income Tax • TDS Consultancy</p></section>
-<section><h2 style="margin:0 0 16px 4px">Our Services</h2><div class="grid"><article class="service-card fade"><div class="icon">🧾</div><h3>Income Tax Return Filing</h3><p>Preparation and filing assistance for eligible individuals, proprietors and other taxpayers, based on applicable provisions and documents.</p></article><article class="service-card fade"><div class="icon">📊</div><h3>Tax Computation & Planning</h3><p>Review of income, deductions, eligible exemptions and tax-regime options to help understand the tax position.</p></article><article class="service-card fade"><div class="icon">📩</div><h3>Income Tax Notices</h3><p>Assistance in understanding notices, identifying information required and preparing suitable responses with supporting records.</p></article><article class="service-card fade"><div class="icon">🏢</div><h3>Assessment Support</h3><p>Documentation and response assistance for assessment and verification proceedings, as applicable.</p></article><article class="service-card fade"><div class="icon">📚</div><h3>TDS & Tax Credit Review</h3><p>Reconciliation assistance for Form 26AS, AIS, TIS and tax credit details before return filing.</p></article><article class="service-card fade"><div class="icon">⚖️</div><h3>Appeal & Rectification Assistance</h3><p>Support with preparing documents and submissions for eligible rectification and appellate matters.</p></article></div></section>
-<section class="intro fade" style="margin-top:20px"><h2>Our Approach</h2>
-<ul><li>Understand the requirement and applicable compliance.</li><li>Review the records and supporting documents provided.</li><li>Explain missing information, mismatches and next steps.</li><li>Proceed with preparation or filing after confirmation and authorisation.</li></ul>
-<p style="margin-top:14px">The scope of work depends on the nature of the case, applicable law, available records and authorisation. Final tax positions should be confirmed from the relevant documents.</p></section>
-<section class="cta fade"><h2>Need Assistance?</h2><p>Get in touch to discuss your compliance or accounting requirement.</p>
-<a class="btn gold" href="tel:+919557363080">Call: +91 9557363080</a>
-<a class="btn" href="mailto:yashy4423@gmail.com">Send Email</a>
-<a class="btn" href="https://wa.me/919557363080">WhatsApp</a></section>
+</head><body>
+<div class="top"><span>📍 Agra, Uttar Pradesh, India</span><span>☎ <a href="tel:+919557363080">+91 9557363080</a> &nbsp; | &nbsp; ✉ <a href="mailto:yashy4423@gmail.com">yashy4423@gmail.com</a></span></div>
+<nav class="nav"><a class="brand" href="index.html">YASH GOYAL<small>GST • INCOME TAX • TDS CONSULTANCY</small></a>
+<div class="links"><a href="index.html">Home</a><a href="gst-services.html">GST</a><a href="income-tax-services.html">Income Tax</a><a href="tds-services.html">TDS</a><a href="accounting-services.html">Accounting</a></div></nav>
+<header class="hero"><div class="hero-inner reveal"><div class="eyebrow">INCOME TAX • TAX COMPLIANCE</div>
+<h1>Income Tax Services<br><span>with clarity & confidence.</span></h1><p>Reliable assistance for income tax return filing, tax planning, notices and assessment-related compliance — with a focus on accurate records and clear guidance.</p>
+<div class="actions"><a class="btn btn-gold" href="https://wa.me/919557363080">ENQUIRE ON WHATSAPP ↗</a><a class="btn btn-outline" href="tel:+919557363080">CALL +91 9557363080</a></div>
+<div class="hero-note"><b>Yash Goyal</b> &nbsp;|&nbsp; GST Practitioner &nbsp;|&nbsp; LLB</div></div></header>
+<main class="wrap">
+<div class="stats"><div class="stat"><strong>Clear Guidance</strong><span>Understand your requirements</span></div><div class="stat"><strong>Organised Process</strong><span>Records & reconciliation</span></div><div class="stat"><strong>Client Focus</strong><span>Support at every step</span></div></div>
+<section class="section"><div class="section-head"><div class="kicker">What We Do</div><h2>Professional support for your compliance needs</h2><p>Make income tax compliance more organised. Whether you are an individual, professional, proprietor or business, get support in understanding your tax position and completing applicable filing requirements.</p></div>
+<div class="cards"><article class="card reveal"><div class="icon">▤</div><h3>Income Tax Return Filing</h3><p>Preparation and filing assistance for eligible individuals, professionals, proprietors and other taxpayers.</p></article><article class="card reveal"><div class="icon">◈</div><h3>Tax Computation & Regime Review</h3><p>Review of income, eligible deductions and exemptions, and comparison of applicable tax-regime options.</p></article><article class="card reveal"><div class="icon">✉</div><h3>Income Tax Notice Assistance</h3><p>Understanding notices, preparing document checklists and drafting suitable responses based on records.</p></article><article class="card reveal"><div class="icon">▦</div><h3>AIS & Form 26AS Reconciliation</h3><p>Review of tax-credit information, reported transactions and differences before return filing.</p></article><article class="card reveal"><div class="icon">⚖</div><h3>Assessment & Appeal Support</h3><p>Documentation and submission assistance for applicable assessment, rectification and appellate matters.</p></article><article class="card reveal"><div class="icon">✓</div><h3>Advance Tax & Compliance Review</h3><p>Assistance in reviewing estimated tax liability and applicable payment and compliance requirements.</p></article></div></section>
+<section class="section" style="padding-top:0"><div class="split">
+<div class="panel"><div class="eyebrow">THE YASH GOYAL APPROACH</div><h2>Clarity in process.<br>Confidence in compliance.</h2><p>We begin by understanding your income sources and filing history, review the documents and tax-credit information, explain any gaps, and proceed with preparation after your confirmation.</p><a class="btn btn-gold" href="mailto:yashy4423@gmail.com">DISCUSS YOUR REQUIREMENT</a></div>
+<div><div class="kicker">WHY WORK WITH US</div><h2 style="font-size:30px;color:#071b35;margin:9px 0 22px">A structured approach from start to finish</h2>
+<div class="checklist">
+<div class="check"><div class="tick">✓</div><div><b>Understand</b><span>We identify your requirement and relevant compliance.</span></div></div>
+<div class="check"><div class="tick">✓</div><div><b>Review</b><span>We examine available records and supporting documents.</span></div></div>
+<div class="check"><div class="tick">✓</div><div><b>Explain</b><span>We highlight missing information, differences and next steps.</span></div></div>
+<div class="check"><div class="tick">✓</div><div><b>Proceed</b><span>Work moves ahead after your confirmation and authorisation.</span></div></div>
+</div></div></div></section>
+<section class="cta"><div class="eyebrow">LET'S CONNECT</div><h2>Need professional assistance?</h2><p>Share your requirement and get in touch with Yash Goyal.</p>
+<div class="actions"><a class="btn btn-gold" href="https://wa.me/919557363080">WHATSAPP US</a><a class="btn btn-outline" href="mailto:yashy4423@gmail.com">SEND AN EMAIL</a></div></section>
+<p style="font-size:11px;color:#7b8797;text-align:center;margin:-42px 0 28px">The correct tax treatment depends on the facts, documents and law applicable to the relevant assessment year. Final filing is subject to verification and client approval.</p>
 </main>
-<footer>© 2026 Yash Goyal | GST Practitioner | LLB | Agra, Uttar Pradesh<br>GST • Income Tax • TDS Consultancy</footer>
+<footer><b>YASH GOYAL</b><br>GST Practitioner | LLB<br>GST • Income Tax • TDS Consultancy<br>Agra, Uttar Pradesh, India<br>☎ +91 9557363080 &nbsp; · &nbsp; ✉ yashy4423@gmail.com</footer>
 </body></html>
